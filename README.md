@@ -40,7 +40,7 @@ All secrets are handled via environment variables to keep tokens secure.
 You can try the live app here:  
 👉 [**AI Resume & Portfolio Builder on Streamlit**](https://ai-resume-and-portfolio-builder.streamlit.app)
 
-This project is deployed using **Streamlit Cloud**, allowing users to instantly generate and download AI-crafted resumes and portfolio websites directly from their browser — no setup required.
+This project is deployed using **Streamlit Cloud**, allowing users to instantly generate and download AI-crafted resumes and portfolio websites directly from their browser (no setup required).
 
 ---
 
