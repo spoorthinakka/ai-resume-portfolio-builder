@@ -1,0 +1,16 @@
+# === AI Resume & Portfolio Builder – Git Ignore File ===
+
+# Ignore environment and system files
+.env
+__pycache__/
+*.pyc
+
+# Streamlit cache
+.streamlit/secrets.toml
+
+# Virtual environment folders
+venv/
+env/
+
+# IDE settings (optional)
+.vscode/
