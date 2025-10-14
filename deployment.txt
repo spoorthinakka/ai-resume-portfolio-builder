@@ -1,0 +1,75 @@
+AI Resume & Portfolio Builder — Deployment Guide
+===============================================
+
+The following guide explains how to deploy the app on Streamlit Cloud.
+
+Prerequisites
+-------------
+1) GitHub repository with:
+   - app.py
+   - requirements.txt
+   - (optional) README.md, LICENSE, .gitignore
+
+2) Hugging Face API Token (HF_TOKEN)
+
+Environment Variables (Required)
+--------------------------------
+The app reads:
+- HF_TOKEN  -> Hugging Face Inference API token (required)
+- HF_MODEL  -> Optional, default: meta-llama/Llama-3.1-8B-Instruct
+
+NOTE: Do NOT commit tokens to GitHub. Keep secrets off the repo.
+
+Deploying on Streamlit Cloud
+----------------------------
+1) Go to https://streamlit.io/cloud and click “New app”.
+2) Connect your GitHub account and select this repository.
+3) Branch: main
+4) Main file path: app.py
+5) Click “Deploy”.
+
+After first deploy:
+- App ➝ Settings ➝ Secrets ➝ Add the token in the appeared text box
+  Add HF_TOKEN (and HF_MODEL if you want to override).
+- Click “Save” (this restarts the app with the variables).
+
+Python & Dependencies
+---------------------
+- Streamlit Cloud installs packages from requirements.txt automatically.
+- (Optional) If you need to pin Python version, create a runtime.txt with a single line, e.g.:
+    3.11
+  This is optional; only add if you face Python version issues.
+
+Common Issues & Fixes
+---------------------
+1) “Missing HF_TOKEN” or model error:
+   - Ensure HF_TOKEN is set under App ➝ Settings ➝ Secrets ➝ Add the token in the appeared text box.
+   - Confirm it’s a valid Hugging Face Inference token.
+
+2) Packages fail to install:
+   - Make sure every dependency is listed in requirements.txt (streamlit, huggingface_hub, python-docx, fpdf, python-dotenv).
+
+3) App loads but generation fails:
+   - Check model name in HF_MODEL or remove it to use default.
+   - Verify your Hugging Face account has access to the chosen model.
+
+4) Changing secrets:
+   - Update environment variables in the Streamlit app settings and save; the app will redeploy automatically.
+
+Local Run (for testing)
+-----------------------
+1) python -m venv venv
+2) (Windows) .\venv\Scripts\activate
+   (macOS/Linux) source venv/bin/activate
+3) pip install -r requirements.txt
+4) Set HF_TOKEN locally:
+   - Create a .env file with: HF_TOKEN=hf_xxx
+   - Or set an environment variable in your shell
+5) streamlit run app.py
+
+Live App Link
+-------------
+Place your public URL in README for quick access:
+https://ai-resume-and-portfolio-builder.streamlit.app
+
+End of file.
