@@ -1,81 +1,113 @@
-# === AI Resume & Portfolio Builder – Setup Instructions ===
+AI Resume & Portfolio Builder — Local Setup Guide
+=================================================
 
-## 📁 STEP 1: Create your project folder
-Create a new folder for your project.  
-You can name it for example:  
-AI-Resume-Portfolio-Builder
-Open this folder in your preferred code editor (like **VS Code**) or terminal.
+The following document provides step-by-step instructions for setting up and running the
+AI Resume & Portfolio Builder on your local machine.
 
----
+Prerequisites
+-------------
+- Python 3.8 or newer
+- Internet connection (for Hugging Face Inference API)
+- Valid Hugging Face API Token (HF_TOKEN)
 
-## ⚙️ STEP 2: Install Python
-Make sure **Python 3.8 or newer** is installed.  
-Check your version:
-python --version
-If Python is not installed, download it from:  
+-------------------------------------------------
+📁 STEP 1: Create Your Project Folder
+-------------------------------------------------
+1) Create a new folder for your project (example):
+      mkdir ai-resume-portfolio-builder
+      cd ai-resume-portfolio-builder
+2) Open this folder in your preferred code editor (e.g., VS Code).
+
+-------------------------------------------------
+⚙️ STEP 2: Verify Python Installation
+-------------------------------------------------
+Check if Python is installed:
+      python --version
+
+If not installed, download and install from:
 👉 https://www.python.org/downloads/
 
----
+-------------------------------------------------
+🧠 STEP 3: Create the Main Application File
+-------------------------------------------------
+Inside your project folder, create a new file named:
+      app.py
 
-## 🧠 STEP 3: Create the main app file
-Inside your project folder, create a file named:
-app.py
 Paste the complete **AI Resume & Portfolio Builder** Streamlit code into this file.
 
----
+-------------------------------------------------
+🔑 STEP 4: Create a `.env` File
+-------------------------------------------------
+In the same directory as `app.py`, create a file named `.env`  
+and add your Hugging Face API key:
 
-## 🔑 STEP 4: Create your `.env` file
-In the same folder as `app.py`, create a new file named:
-.env
-Add your API key inside it:
-HF_TOKEN=your_api_key_here
+      HF_TOKEN=your_huggingface_token_here
 
-💡 **Tip:** Keep your `.env` file private — never upload it to GitHub.
+(Optional)
+      HF_MODEL=meta-llama/Llama-3.1-8B-Instruct
 
----
+💡 Keep the `.env` file private — do not upload it to GitHub.
 
-## 🧩 STEP 5: (Important) Create and Activate Virtual Environment
-To isolate project dependencies, create a virtual environment.
+-------------------------------------------------
+🧩 STEP 5: Create and Activate a Virtual Environment
+-------------------------------------------------
+To isolate dependencies, set up a virtual environment.
 
-**For Windows (PowerShell):**
-python -m venv venv
-.\venv\Scripts\activate
+**Windows (PowerShell):**
+      python -m venv venv
+      .\venv\Scripts\activate
 
-If you face a security error like “UnauthorizedAccess”, run:
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-Then activate again:
-.\venv\Scripts\activate
+If you see a security error such as “UnauthorizedAccess”:
+      Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+      .\venv\Scripts\activate
 
-**For macOS/Linux:**
-python3 -m venv venv
-source venv/bin/activate
+**macOS/Linux:**
+      python3 -m venv venv
+      source venv/bin/activate
 
-💡 **Note:** Each time you reopen VS Code or PowerShell after closing it, your virtual environment will deactivate automatically.  
-Simply reactivate it before running commands again using:
-.\venv\Scripts\activate
+💡 Each time you reopen VS Code or the terminal, reactivate the environment:
+      .\venv\Scripts\activate
 
----
-
-## 📦 STEP 6: Install Required Dependencies
-All dependencies are listed in `requirements.txt`.  
-Install them by running:
-pip install -r requirements.txt
+-------------------------------------------------
+📦 STEP 6: Install Dependencies
+-------------------------------------------------
+Install all required libraries:
+      pip install -r requirements.txt
 
 This installs:
-- streamlit — for the web interface  
-- huggingface_hub — to connect with Hugging Face API  
-- python-docx — for downloadable Word resumes  
-- fpdf — for downloadable PDF resumes  
-- python-dotenv — for secure API key loading
+- streamlit → for the web UI  
+- huggingface_hub → connects to Hugging Face Inference API  
+- python-docx → generates DOCX resumes  
+- fpdf → generates PDF resumes  
+- python-dotenv → securely loads environment variables
 
----
+-------------------------------------------------
+🚀 STEP 7: Run the Application
+-------------------------------------------------
+Launch the Streamlit app:
+      streamlit run app.py
 
-## 🚀 STEP 7: Launch the App
-Run the Streamlit app:
-streamlit run app.py
-Your browser will open automatically, showing the **AI Resume & Portfolio Builder** interface.
+Your default browser will open automatically showing:
+🧠 **AI Resume & Portfolio Builder**
 
----
+-------------------------------------------------
+✅ STEP 8: Start Using the App
+-------------------------------------------------
+1) Fill out all sections: contact info, education, skills, projects, etc.  
+2) Optionally, let AI generate your Professional Overview.  
+3) Click **Generate Resume**.  
+4) You can then:
+   - Edit content directly in the app  
+   - Download as PDF, DOCX, or TXT  
+   - Export a personal portfolio (HTML + CSS) as a .zip file
 
-## ✅ You’re all set!
-You can now generate, edit, and download resumes — and even export your AI-generated **Portfolio Website (.zip)**.
+-------------------------------------------------
+💡 Troubleshooting
+-------------------------------------------------
+- **“Missing HF_TOKEN”** → Add your token in `.env`.
+- **“ModuleNotFoundError”** → Reinstall dependencies.
+- **App not opening** → Verify Streamlit installation (`pip show streamlit`).
+- **Model access issues** → Use the default model `meta-llama/Llama-3.1-8B-Instruct`.
+
+-------------------------------------------------
+End of file.
