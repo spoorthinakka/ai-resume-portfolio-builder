@@ -1,31 +1,34 @@
-# ================================================================
-# AI Resume & Portfolio Builder — Dependency List
-# ================================================================
+AI Resume & Portfolio Builder — Requirements
+============================================
 
-# The following file defines all Python dependencies required to run the Streamlit-based AI Resume & Portfolio Builder application.
-#
-# 💡 Install everything automatically using:
-#     pip install -r requirements.txt
-#
-# Or install manually (for debugging or minimal setups):
-#     pip install streamlit
-#     pip install huggingface_hub
-#     pip install python-docx
-#     pip install fpdf
-#     pip install python-dotenv
-#
-# ----------------------------------------------------------------
-# Library Details
-# ----------------------------------------------------------------
-# streamlit        → Builds the interactive web app interface.
-# huggingface_hub  → Connects to the Hugging Face Inference API for AI text generation.
-# python-docx      → Exports resumes as editable Word (.docx) files.
-# fpdf             → Generates professional PDF resumes.
-# python-dotenv    → Securely loads environment variables (HF_TOKEN, HF_MODEL).
-# ----------------------------------------------------------------
+The following file lists all the dependencies required to run the AI Resume & Portfolio Builder.
 
+Installation
+------------
+Install all dependencies using:
+    pip install -r requirements.txt
+
+Alternatively, install them individually:
+    pip install streamlit
+    pip install huggingface_hub
+    pip install python-docx
+    pip install fpdf
+    pip install python-dotenv
+
+Purpose of Each Library
+-----------------------
+streamlit         : Builds the web-based user interface.
+huggingface_hub   : Connects with the Hugging Face Inference API.
+python-docx       : Exports resumes as editable Word (.docx) files.
+fpdf              : Generates PDF resumes.
+python-dotenv     : Loads environment variables such as HF_TOKEN securely.
+
+Dependencies
+------------
 streamlit
 huggingface_hub
 python-docx
 fpdf
 python-dotenv
+
+End of file.
