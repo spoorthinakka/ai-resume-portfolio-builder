@@ -1,23 +1,31 @@
-# === AI Resume & Portfolio Builder – Requirements ===
+# ================================================================
+# AI Resume & Portfolio Builder — Dependency List
+# ================================================================
 
-# Install all dependencies automatically with:
+# The following file defines all Python dependencies required to run the Streamlit-based AI Resume & Portfolio Builder application.
+#
+# 💡 Install everything automatically using:
 #     pip install -r requirements.txt
 #
-# If installing individually:
+# Or install manually (for debugging or minimal setups):
 #     pip install streamlit
 #     pip install huggingface_hub
 #     pip install python-docx
 #     pip install fpdf
 #     pip install python-dotenv
 #
-# These libraries enable:
-#  • Streamlit web interface
-#  • AI text generation via Hugging Face API
-#  • Resume export in PDF & DOCX formats
-#  • Secure API key handling using .env file
+# ----------------------------------------------------------------
+# Library Details
+# ----------------------------------------------------------------
+# streamlit        → Builds the interactive web app interface.
+# huggingface_hub  → Connects to the Hugging Face Inference API for AI text generation.
+# python-docx      → Exports resumes as editable Word (.docx) files.
+# fpdf             → Generates professional PDF resumes.
+# python-dotenv    → Securely loads environment variables (HF_TOKEN, HF_MODEL).
+# ----------------------------------------------------------------
 
-streamlit         # Web app framework for interactive UI
-huggingface_hub   # Connects to Hugging Face Inference API
-python-docx       # Generates .docx (Word) resumes
-fpdf              # Creates downloadable PDF resumes
-python-dotenv     # Loads environment variables from .env file
+streamlit
+huggingface_hub
+python-docx
+fpdf
+python-dotenv
