@@ -1,0 +1,81 @@
+# === AI Resume & Portfolio Builder – Setup Instructions ===
+
+## 📁 STEP 1: Create your project folder
+Create a new folder for your project.  
+You can name it for example:  
+AI-Resume-Portfolio-Builder
+Open this folder in your preferred code editor (like **VS Code**) or terminal.
+
+---
+
+## ⚙️ STEP 2: Install Python
+Make sure **Python 3.8 or newer** is installed.  
+Check your version:
+python --version
+If Python is not installed, download it from:  
+👉 https://www.python.org/downloads/
+
+---
+
+## 🧠 STEP 3: Create the main app file
+Inside your project folder, create a file named:
+app.py
+Paste the complete **AI Resume & Portfolio Builder** Streamlit code into this file.
+
+---
+
+## 🔑 STEP 4: Create your `.env` file
+In the same folder as `app.py`, create a new file named:
+.env
+Add your API key inside it:
+HF_TOKEN=your_api_key_here
+
+💡 **Tip:** Keep your `.env` file private — never upload it to GitHub.
+
+---
+
+## 🧩 STEP 5: (Important) Create and Activate Virtual Environment
+To isolate project dependencies, create a virtual environment.
+
+**For Windows (PowerShell):**
+python -m venv venv
+.\venv\Scripts\activate
+
+If you face a security error like “UnauthorizedAccess”, run:
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+Then activate again:
+.\venv\Scripts\activate
+
+**For macOS/Linux:**
+python3 -m venv venv
+source venv/bin/activate
+
+💡 **Note:** Each time you reopen VS Code or PowerShell after closing it, your virtual environment will deactivate automatically.  
+Simply reactivate it before running commands again using:
+.\venv\Scripts\activate
+
+---
+
+## 📦 STEP 6: Install Required Dependencies
+All dependencies are listed in `requirements.txt`.  
+Install them by running:
+pip install -r requirements.txt
+
+This installs:
+- streamlit — for the web interface  
+- huggingface_hub — to connect with Hugging Face API  
+- python-docx — for downloadable Word resumes  
+- fpdf — for downloadable PDF resumes  
+- python-dotenv — for secure API key loading
+
+---
+
+## 🚀 STEP 7: Launch the App
+Run the Streamlit app:
+streamlit run app.py
+Your browser will open automatically, showing the **AI Resume & Portfolio Builder** interface.
+
+---
+
+## ✅ You’re all set!
+You can now generate, edit, and download resumes — and even export your AI-generated **Portfolio Website (.zip)**.
