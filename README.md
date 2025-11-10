@@ -1,7 +1,7 @@
 # AI Resume & Portfolio Builder  
 👉 [**Live Demo on Streamlit**](https://ai-resume-and-portfolio-builder.streamlit.app)
 
-Generate an ATS-friendly resume and a matching one-page portfolio site using a Hugging Face LLM — then download as **PDF**, **DOCX**, **TXT**, or **HTML zip**.
+Generate an ATS-friendly resume and a matching one-page portfolio site using a Hugging Face LLM, then download as **PDF**, **DOCX**, **TXT**, or **HTML zip**.
 
 ---
 
