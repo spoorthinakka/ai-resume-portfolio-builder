@@ -6,13 +6,7 @@ Generate an ATS-friendly resume and a matching one-page portfolio site using a H
 ---
 
 ## Project Summary
-**AI Resume & Portfolio Builder** is a Streamlit web app that turns your inputs into a polished, ATS-friendly resume and a simple one-page portfolio website.  
-It collects your contact details, education, skills, projects, internships/experience, publications, and extras, then uses a Hugging Face chat-instruct model to draft a well-structured CV.  
-The app post-processes the output to ensure clean formatting, consistent headings, and neat bullet points — allowing you to download professional copies in **PDF**, **DOCX**, or **TXT** formats.
-
-Beyond resumes, the app can export a **mini portfolio site** (HTML + CSS) as a zip file based on your final resume content.  
-You can pick visual templates, edit the generated text inline, and optionally get a lightweight **ATS / role-fit score** with improvement suggestions.  
-All secrets are handled via environment variables to keep tokens secure.
+**AI Resume & Portfolio Builder** is a Streamlit web app that turns your inputs into a polished, ATS-friendly resume and a simple one-page portfolio website. It collects your contact details, education, skills, projects, internships/experience, publications, and extras, then uses a Hugging Face chat-instruct model to draft a well-structured CV. The app post-processes the output to ensure clean formatting, consistent headings, and neat bullet points — allowing you to download professional copies in **PDF**, **DOCX**, or **TXT** formats. Beyond resumes, the app can export a **mini portfolio site** (HTML + CSS) as a zip file based on your final resume content. You can pick visual templates, edit the generated text inline, and optionally get a lightweight **ATS / role-fit score** with improvement suggestions. All secrets are handled via environment variables to keep tokens secure.
 
 ---
 
